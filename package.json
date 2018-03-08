@@ -1,0 +1,25 @@
+{
+  "name": "threejs",
+  "version": "1.0.0",
+  "description": "threejs learning",
+  "main": "app.js",
+  "dependencies": {
+    "dat.gui": "^0.7.1",
+    "three.js": "^0.77.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-serve": "^1.4.0",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aniri",
+  "license": "ISC"
+}
