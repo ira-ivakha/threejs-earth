@@ -51,6 +51,8 @@ let camera = new THREE.PerspectiveCamera(45, width / height, 1, 5000);
 
 // SCENE
 let group = new THREE.Group();
+group.rotation.z = 0.3;
+earth.rotation.y = 0.2;
 group.add(earth);
 moon.position.set(-500, 0, 0);
 group.add(moon);
@@ -65,14 +67,14 @@ let directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
 scene.add( directionalLight );
 
 let groupParams = {
-        rotationY : 0,
+        rotationY : 0.005,
         rotationX : 0,
         rotationZ : 0
     },
     earthParams = {
-        rotationY : 0,
-        rotationX : 0.005,
-        rotationZ : 0.005
+        rotationY : -0.05,
+        rotationX : 0,
+        rotationZ : 0
     },
     moonParams = {
         rotationY : 0,
@@ -86,6 +88,9 @@ let animate = function () {
     requestAnimationFrame( animate );
 
     let figures = [group, earth, moon];
+    figures.map(function(){
+
+    });
     for (let k =0; k<figures.length; k++) {
         let figure = figures[k];
         let params = figuresParams[k];
